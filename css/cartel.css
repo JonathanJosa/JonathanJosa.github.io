@@ -1,0 +1,194 @@
+/* /!\ You need to add vendor prefixes in order to render the CSS properly (or simply use http://leaverou.github.io/prefixfree/) /!\ */ #tridiv {
+  perspective: 800px;
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  font-size: 62.5%;
+}
+.face {
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+}
+.scene, .shape, .face, .face-wrapper, .cr {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+.scene {
+  width: 80em;
+  height: 80em;
+  top: 50%;
+  left: 50%;
+  margin: -40em 0 0 -40em;
+}
+.shape {
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform-origin: 50%;
+}
+.face, .face-wrapper {
+  overflow: hidden;
+  transform-origin: 0 0;
+  backface-visibility: hidden;
+  /* hidden by default, prevent blinking and other weird rendering glitchs */
+}
+.face {
+  background-size: 100% 100%!important;
+  background-position: center;
+}
+.face-wrapper .face {
+  left: 100%;
+  width: 100%;
+  height: 100%
+}
+.photon-shader {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%
+}
+.side {
+  left: 50%;
+}
+.cr, .cr .side {
+  height: 100%;
+}
+[class*="cylinder"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cylinder"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cylinder"] .tp, [class*="cylinder"] .bm, [class*="cylinder"] .tp .photon-shader, [class*="cylinder"] .bm .photon-shader {
+  border-radius: 50%;
+}
+[class*="cylinder"] .bm {
+  top: 100%;
+}
+[class*="cuboid"] .ft, [class*="cuboid"] .bk {
+  width: 100%;
+  height: 100%;
+}
+[class*="cuboid"] .bk {
+  left: 100%;
+}
+[class*="cuboid"] .rt {
+  transform: rotateY(-90deg) translateX(-50%);
+}
+[class*="cuboid"] .lt {
+  transform: rotateY(90deg) translateX(-50%);
+}
+[class*="cuboid"] .tp {
+  transform: rotateX(90deg) translateY(-50%);
+}
+[class*="cuboid"] .bm {
+  transform: rotateX(-90deg) translateY(-50%);
+}
+[class*="cuboid"] .lt {
+  left: 100%;
+}
+[class*="cuboid"] .bm {
+  top: 100%;
+}
+/* .cyl-1 styles */
+.cyl-1 {
+  transform:translate3D(0.1875em, -12.1875em, 0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  opacity:1;
+  width:2.75em;
+  height:24.75em;
+  margin:-12.375em 0 0 -1.375em;
+}
+.cyl-1 .tp, .cyl-1 .bm {
+  width:2.75em;
+  height:2.75em;
+}
+.cyl-1 .side {
+  width:0.9185291646404923em;
+  height:24.75em;
+}
+.cyl-1 .s0 {
+  transform: rotateY(18deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s1 {
+  transform: rotateY(54deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s2 {
+  transform: rotateY(90deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s3 {
+  transform: rotateY(126deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s4 {
+  transform: rotateY(162deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s5 {
+  transform: rotateY(198deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s6 {
+  transform: rotateY(234deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s7 {
+  transform: rotateY(270deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s8 {
+  transform: rotateY(306deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .s9 {
+  transform: rotateY(342deg) translate3D(-50%, 0, 1.35em);
+}
+.cyl-1 .face, .cyl-1 .side {
+  background:url(https://static.vecteezy.com/system/resources/previews/000/434/094/non_2x/wood-texture-vector.jpg) #b06d6d;
+}
+/* .cub-4 styles */
+.cub-4 {
+  transform:translate3D(5.437500000000003em, -22.308333333333337em, 0.6249999999999997em) rotateX(0deg) rotateY(90deg) rotateZ(33deg);
+  opacity:1;
+  width:0.875em;
+  height:2.6000000000000014em;
+  margin:-1.3000000000000007em 0 0 -0.4375em;
+}
+.cub-4 .ft {
+  transform:translateZ(8.5625em);
+}
+.cub-4 .bk {
+  transform:translateZ(-8.5625em) rotateY(180deg);
+}
+.cub-4 .rt, .cub-4 .lt {
+  width:17.125em;
+  height:2.6000000000000014em;
+}
+.cub-4 .tp, .cub-4 .bm {
+  width:0.875em;
+  height:17.125em;
+}
+.cub-4 .face {
+  background-color:#FFFFFF;
+}
+/* .cub-5 styles */
+.cub-5 {
+  transform:translate3D(-3.962499999999997em, -18.908333333333335em, 2.8249999999999997em) rotateX(0deg) rotateY(125deg) rotateZ(33deg);
+  opacity:1;
+  width:0.875em;
+  height:2.6000000000000014em;
+  margin:-1.3000000000000007em 0 0 -0.4375em;
+}
+.cub-5 .ft {
+  transform:translateZ(8.5625em);
+}
+.cub-5 .bk {
+  transform:translateZ(-8.5625em) rotateY(180deg);
+}
+.cub-5 .rt, .cub-5 .lt {
+  width:17.125em;
+  height:2.6000000000000014em;
+}
+.cub-5 .tp, .cub-5 .bm {
+  width:0.875em;
+  height:17.125em;
+}
+.cub-5 .face {
+  background-color:#FFFFFF;
+}

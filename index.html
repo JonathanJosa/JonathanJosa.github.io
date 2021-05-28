@@ -1,1 +1,43 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>JonathanJosa</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bloques.css">
+  </head>
+  <body>
+    <div class="container centro" id="centro" name="centro">
+      <include src="./cartel.html"></include>
+      <div id="includedContent"></div>
+      <div class="cartel">
+
+
+        <!-- <button type="button" onclick="mover('norte')" name="button"><i class="fas fa-chevron-up"></i></button>
+        <button type="button" onclick="mover('sur')" name="button"><i class="fas fa-chevron-up"></i></button>
+        <button type="button" onclick="mover('este')" name="button"><i class="fas fa-chevron-up"></i></button>
+        <button type="button" onclick="mover('oeste')" name="button"><i class="fas fa-chevron-up"></i></button> -->
+      </div>
+    </div>
+    <div class="container norte" id="norte" name="norte">
+      <button type="button" onclick="regresar('norte')" name="button"><i class="fas fa-chevron-up"></i></button>
+    </div>
+    <div class="container sur" id="sur" name="sur">
+      <button type="button" onclick="regresar('sur')" name="button"><i class="fas fa-chevron-up"></i></button>
+    </div>
+    <div class="container este" id="este" name="este">
+      <button type="button" onclick="regresar('este')" name="button"><i class="fas fa-chevron-up"></i></button>
+    </div>
+    <div class="container oeste" id="oeste" name="oeste">
+      <button type="button" onclick="regresar('oeste')" name="button"><i class="fas fa-chevron-up"></i></button>
+    </div>
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/mov.js" charset="utf-8"></script>
+    <!-- <script src="js/include.js" charset="utf-8"></script> -->
+    <script>
+    $(function(){
+      $("#includedContent").load("cartel.html");
+    });
+    </script>
+  </body>
+</html>
